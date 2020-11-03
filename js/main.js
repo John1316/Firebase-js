@@ -86,15 +86,15 @@ reviews.addEventListener('click', (e) => {
 });
 
 function reviewTemplate({username, email, password , idNumber}) {
+
   return `
+    
     <td>1</td>
     <td class='username'>${username}</td>
     <td class='email'>${email}</td>
     <td class='idNumber'>${idNumber}</td>
     <td class='password'>${password}</td>
-    
-    <button class='edit btn btn-info mr-2'>Edit</button>
-    <button class='delete btn btn-danger mr-2'>Delete</button>
-    
+    <button class='edit btn btn-info mr-2 my-2' data-toggle='modal' data-target='#add'>Edit</button>
+    <button class='delete btn btn-danger mr-2 my-2'>Delete</button>
   `;
 };
