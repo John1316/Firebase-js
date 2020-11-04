@@ -13,12 +13,10 @@
   </head>
   <body>
     
-    <div class='container'>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">Add</button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="container">
+      
+      
+      <!-- <div class="modal fade" id="editUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -45,13 +43,45 @@
         </div>
       </div>
 
-        <h2>Reviews</h2>
-        <h4>CREATE/UPDATE</h4>
-        
-        
-        <br/>
-        <h4>READ/DELETE</h4>
-        <table class="table table-light">
+      <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                  <form id='reviewForm'>
+                    <input type="hidden" id='hiddenId' />
+                    <input type="text" id='email' placeholder="email" class="form-control my-2"/>
+                    <input type="text" id='idNumber' placeholder="idNumber" class="form-control my-2"/>
+                    <input type="text" id='password' placeholder="password" class="form-control my-2"/>
+                    <input type="text" id='username' placeholder="username" class="form-control my-2"/>
+
+                    <button class="btn btn-success" type='submit'>Add/Update review</button>
+                  </form>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUser">Add</button> -->
+      
+      <form id='reviewForm'>
+        <input type="hidden" id='hiddenId' />
+        <input type="text" id='email' placeholder="email" class="form-control my-2"/>
+        <input type="text" id='idNumber' placeholder="idNumber" class="form-control my-2"/>
+        <input type="text" id='password' placeholder="password" class="form-control my-2"/>
+        <input type="text" id='username' placeholder="username" class="form-control my-2"/>
+
+        <button class="btn btn-success" type='submit'>Add/Update review</button>
+      </form>
+
+        <table class="table table-light" id="table">
           <thead class="thead-light">
             <tr>
               <th>id</th>
@@ -65,6 +95,7 @@
           <tbody id="reviews">
             <tr>
             </tr>
+            
           </tbody>
 
         </table>

@@ -15,11 +15,11 @@ var db = firebase.database();
 // CREATE REWIEW
 
 var reviewForm = document.getElementById('reviewForm');
-var username   = document.getElementById('username');
-var email    = document.getElementById('email');
-var idNumber    = document.getElementById('idNumber');
-var password    = document.getElementById('password');
-var hiddenId   = document.getElementById('hiddenId');
+var username = document.getElementById('username');
+var email = document.getElementById('email');
+var idNumber = document.getElementById('idNumber');
+var password = document.getElementById('password');
+var hiddenId = document.getElementById('hiddenId');
 
 reviewForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -94,7 +94,7 @@ function reviewTemplate({username, email, password , idNumber}) {
     <td class='email'>${email}</td>
     <td class='idNumber'>${idNumber}</td>
     <td class='password'>${password}</td>
-    <button class='edit btn btn-info mr-2 my-2' data-toggle='modal' data-target='#add'>Edit</button>
+    <button class='edit btn btn-info mr-2 my-2' >Edit</button>
     <button class='delete btn btn-danger mr-2 my-2'>Delete</button>
   `;
 };
